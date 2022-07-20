@@ -39,7 +39,21 @@ class MyHandler(FTPHandler):
     #     pass
 
     def on_file_received(self, file: str):
-        subprocess.run('python', './sipl_spice/script.py', file)
+        # importing PIL Module
+        from PIL import Image
+        
+        # open the original image
+        original_img = Image.open(file)
+        
+        # Flip the original image vertically
+        vertical_img = original_img.transpose(method=Image.Transpose(Image.Transpose.FLIP_LEFT_RIGHT))
+        vertical_img.save(file)
+        
+        # close all our files object
+        original_img.close()
+        vertical_img.close()
+
+        #subprocess.run('python', './sipl_spice/script.py', file)
         pass
 
     # def on_incomplete_file_sent(self, file):
