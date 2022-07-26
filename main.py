@@ -53,7 +53,7 @@ class MyHandler(FTPHandler):
         # original_img.close()
         # vertical_img.close()
 
-        subprocess.run(['python', './sipl_spice/script.py', file])
+        subprocess.run(['python', './script.py', file])
         #pass
 
     # def on_incomplete_file_sent(self, file):
