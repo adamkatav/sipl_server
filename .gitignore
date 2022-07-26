@@ -127,3 +127,9 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+
+
+#By adam
+sipl_spice/
+ftp_files/
