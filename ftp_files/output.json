@@ -41,7 +41,14 @@
         "IsStatic": true
       }
     ],
-    "Lines": [],
+    "Lines": [
+        {
+            "connectionA" : "Balls",
+            "connectionB" : "Blocks",
+            "indexA" : 0,
+            "indexB" : 0
+        }
+    ],
     "Springs": [
         {
             "connectionA" : "Triangles",
