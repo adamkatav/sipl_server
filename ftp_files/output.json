@@ -1,12 +1,12 @@
 {
   "Carts": [
     {
-      "A": "56.75, -56.75",
-      "B": "68.8, -68.8", 
-      "C": "63.89, -49.6",
-      "D": "75.95, -61.66",
-      "wheel1": "58.16, -58.16",
-      "wheel2": "67.39, -67.39",
+      "A": "54.75, -54.75",
+      "B": "70.8, -70.8", 
+      "C": "61.89, -47.6",
+      "D": "77.95, -63.66",
+      "wheel1": "56.16, -56.16",
+      "wheel2": "69.39, -69.39",
       "radius":  2
     }
   ],
@@ -17,30 +17,15 @@
         "IsStatic": false
       },
       {
-        "Center": "137.5, -75",
+        "Center": "175, -37.5",
         "Radius": 12.5,
-        "IsStatic": false
-      },
-      {
-        "Center": "162.5, -75",
-        "Radius": 12.5,
-        "IsStatic": false
-      },
-      {
-        "Center": "187.5, -75",
-        "Radius": 12.5,
-        "IsStatic": false
-      },
-      {
-        "Center": "175, -10",
-        "Radius": 5,
         "IsStatic": false
       }
       ],
   "Walls": [
       {
         "A": "25, -25",
-        "B": "75, -75"
+        "B": "79, -79"
       }
   ],
   "Blocks": [
@@ -56,20 +41,6 @@
         "B": "125, -50",
         "C": "150, -25",
         "D": "125, -25",
-        "IsStatic": true
-      },
-      {
-        "A": "175, -50",
-        "B": "150, -50",
-        "C": "175, -25",
-        "D": "150, -25",
-        "IsStatic": true
-      },
-      {
-        "A": "200, -50",
-        "B": "175, -50",
-        "C": "200, -25",
-        "D": "175, -25",
         "IsStatic": true
       },
       {
@@ -92,18 +63,6 @@
         "connectionB" : "Blocks",
         "indexA" : 1,
         "indexB" : 1
-      },
-      {
-        "connectionA" : "Balls",
-        "connectionB" : "Blocks",
-        "indexA" : 2,
-        "indexB" : 2
-      },
-      {
-        "connectionA" : "Balls",
-        "connectionB" : "Blocks",
-        "indexA" : 3,
-        "indexB" : 3
       }
   ],
   "Springs": [
@@ -111,7 +70,7 @@
         "connectionA" : "Carts",
         "connectionB" : "Blocks",
         "indexA" : 0,
-        "indexB" : 4
+        "indexB" : 2
       }
   ],
   "Triangles": [
