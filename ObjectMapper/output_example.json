@@ -1,0 +1,39 @@
+{
+  "ImageFilePath": "Real_301.jpg",
+  "Carts": [
+    {
+      "A": "0, 5",
+      "B": "20, 5",
+      "C": "20, 15",
+      "D": "0, 15",
+      "wheel1": "2, 2",
+      "wheel2": "17, 2",
+      "radius": 2.5
+    }
+  ],
+  "Balls": [
+    {
+      "Center": "50, 50",
+      "Radius": 5,
+      "IsStatic": false
+    }
+  ],
+  "Walls": [],
+  "Blocks": [
+    {
+      "A": "40, 0",
+      "B": "60, 5",
+      "C": "55, 20",
+      "D": "35, 15",
+      "IsStatic": true
+    }
+  ],
+  "Lines": [],
+  "Springs": [
+    {
+      "A": "-20, 15",
+      "B": "0, 15"
+    }
+  ],
+  "Triangles": []
+}

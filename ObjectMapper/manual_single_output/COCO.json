@@ -1,0 +1,110 @@
+{
+    "images": [
+        {
+            "id": 1,
+            "width": 300,
+            "height": 300,
+            "file_name": "Real_1.jpg"
+        }
+    ],
+    "annotations": [
+        {
+            "id": 1,
+            "image_id": 1,
+            "category_id": 6,
+            "segmentation": [],
+            "area": 592.3553719008263,
+            "bbox": [
+                22.818181818181813,
+                26.818181818181817,
+                21.36363636363636,
+                27.727272727272723
+            ],
+            "iscrowd": 0
+        },
+        {
+            "id": 2,
+            "image_id": 1,
+            "category_id": 1,
+            "segmentation": [],
+            "area": 4824.793388429751,
+            "bbox": [
+                50.999999999999986,
+                25.454545454545453,
+                63.18181818181817,
+                76.36363636363636
+            ],
+            "iscrowd": 0
+        },
+        {
+            "id": 3,
+            "image_id": 1,
+            "category_id": 1,
+            "segmentation": [],
+            "area": 5563.636363636367,
+            "bbox": [
+                51.45454545454544,
+                189.99999999999997,
+                65.45454545454547,
+                85.00000000000003
+            ],
+            "iscrowd": 0
+        },
+        {
+            "id": 4,
+            "image_id": 1,
+            "category_id": 7,
+            "segmentation": [],
+            "area": 26171.900826446275,
+            "bbox": [
+                111.45454545454544,
+                44.090909090909086,
+                105.45454545454544,
+                248.18181818181816
+            ],
+            "iscrowd": 0
+        }
+    ],
+    "categories": [
+        {
+            "name": "triangle",
+            "id": 1
+        },
+        {
+            "name": "static_rectangle",
+            "id": 2
+        },
+        {
+            "name": "static_ball",
+            "id": 3
+        },
+        {
+            "name": "ceiling",
+            "id": 4
+        },
+        {
+            "name": "floor",
+            "id": 5
+        },
+        {
+            "name": "ball",
+            "id": 6
+        },
+        {
+            "name": "rectangle",
+            "id": 7
+        },
+        {
+            "name": "cart",
+            "id": 8
+        },
+        {
+            "name": "pendulum",
+            "id": 9
+        },
+        {
+            "name": "spring",
+            "id": 10
+        }
+    ]
+}
