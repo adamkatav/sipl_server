@@ -72,6 +72,7 @@ class MyHandler(FTPHandler):
         #Place ObjectMapper output in ftp_files
         subprocess.run(['cp', './jsons/Real_1.json', f'{current_dir}/ftp_files/output.json'])
         os.chdir(current_dir)
+        subprocess.run(['rm', file])
         #subprocess.run(['python', './script.py', file])
         #pass
 
