@@ -129,3 +129,4 @@ dmypy.json
 .pyre/
 
 sipl_spice/
+mmdetection/
