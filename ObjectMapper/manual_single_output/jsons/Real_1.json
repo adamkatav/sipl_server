@@ -1,0 +1,23 @@
+{
+  "Carts": [],
+  "Balls": [
+    {
+      "Center": "117, 261",
+      "Radius": 30,
+      "IsStatic": false
+    }
+  ],
+  "Walls": [],
+  "Blocks": [
+    {
+      "A": "181, 35",
+      "B": "202, 89",
+      "C": "95, 131",
+      "D": "74, 77",
+      "IsStatic": true
+    }
+  ],
+  "Lines": [],
+  "Springs": [],
+  "Triangles": []
+}

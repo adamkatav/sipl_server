@@ -1,8 +1,10 @@
+import os
 import subprocess
+import sys
+from PIL import Image
 from pyftpdlib.authorizers import DummyAuthorizer
 from pyftpdlib.handlers import FTPHandler
 from pyftpdlib.servers import FTPServer
-import sys
 
 FTP_PORT = 2121
 
@@ -50,8 +52,26 @@ class MyHandler(FTPHandler):
         # # close all our files object
         # original_img.close()
         # vertical_img.close()
-        print('asdasdasasd')
-        subprocess.run(['~/MATLAB/bin/matlab', '-batch', '\"single_output_mapping\"'])
+        current_dir = os.getcwd()
+        #Resize image
+        image = Image.open(file)
+        image_resized = image.resize((300, 300))
+        image_resized.save(file)
+        #Place image from phone in ObjectMapper and RCNN
+        subprocess.run(['cp', file, './mmdetection/adam_files/input/Real_1.jpg'])
+        subprocess.run(['cp', file, './ObjectMapper/manual_single_output/Real_1.jpg'])
+        os.chdir('./mmdetection/adam_files/')
+        #Run RCNN
+        subprocess.run(['bash', './runRCNN.sh'])
+        #Place RCNN output in ObjectMapper
+        subprocess.run(['cp', 'our_json_new_result.bbox.json', f'{current_dir}/ObjectMapper/manual_single_output/'])
+        os.chdir(current_dir)
+        os.chdir('ObjectMapper/manual_single_output/')
+        #Run ObjectMapper
+        subprocess.run(['matlab', '-batch', 'single_output_mapping'])
+        #Place ObjectMapper output in ftp_files
+        subprocess.run(['cp', './jsons/Real_1.json', f'{current_dir}/ftp_files/output.json'])
+        os.chdir(current_dir)
         #subprocess.run(['python', './script.py', file])
         #pass
 
@@ -71,7 +91,7 @@ def main():
     # Define a new user having full r/w permissions.
     authorizer.add_user(FTP_USER, FTP_PASSWORD, FTP_DIRECTORY, perm='elradfmw')
 
-    handler = FTPHandler
+    handler = MyHandler
     handler.authorizer = authorizer
 
     # Define a customized banner (string returned when client connects)

@@ -1,79 +1,23 @@
 {
-  "Carts": [
+  "Carts": [],
+  "Balls": [
     {
-      "A": "54.75, -54.75",
-      "B": "70.8, -70.8", 
-      "C": "61.89, -47.6",
-      "D": "77.95, -63.66",
-      "wheel1": "56.16, -56.16",
-      "wheel2": "69.39, -69.39",
-      "radius":  2
+      "Center": "117, 261",
+      "Radius": 30,
+      "IsStatic": false
     }
   ],
-  "Balls": [
-      {
-        "Center": "112.5, -75",
-        "Radius": 12.5,
-        "IsStatic": false
-      },
-      {
-        "Center": "175, -37.5",
-        "Radius": 12.5,
-        "IsStatic": false
-      }
-      ],
-  "Walls": [
-      {
-        "A": "25, -25",
-        "B": "79, -79"
-      }
-  ],
+  "Walls": [],
   "Blocks": [
-      {
-        "A": "125, -50",
-        "B": "100, -50",
-        "C": "125, -25",
-        "D": "100, -25",
-        "IsStatic": true
-      },
-      {
-        "A": "150, -50",
-        "B": "125, -50",
-        "C": "150, -25",
-        "D": "125, -25",
-        "IsStatic": true
-      },
-      {
-        "A": "25, -25",
-        "B": "32, -32",
-        "C": "42.24, -21.76",
-        "D": "35.1, -14.83",
-        "IsStatic": true
-      }
+    {
+      "A": "181, 35",
+      "B": "202, 89",
+      "C": "95, 131",
+      "D": "74, 77",
+      "IsStatic": true
+    }
   ],
-  "Lines": [
-      {
-        "connectionA" : "Balls",
-        "connectionB" : "Blocks",
-        "indexA" : 0,
-        "indexB" : 0
-      },
-      {
-        "connectionA" : "Balls",
-        "connectionB" : "Blocks",
-        "indexA" : 1,
-        "indexB" : 1
-      }
-  ],
-  "Springs": [
-      {
-        "connectionA" : "Carts",
-        "connectionB" : "Blocks",
-        "indexA" : 0,
-        "indexB" : 2
-      }
-  ],
-  "Triangles": [
-  ]
-  }
-  
+  "Lines": [],
+  "Springs": [],
+  "Triangles": []
+}
