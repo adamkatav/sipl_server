@@ -73,6 +73,8 @@ class MyHandler(FTPHandler):
         subprocess.run(['cp', './jsons/Real_1.json', f'{current_dir}/ftp_files/output.json'])
         os.chdir(current_dir)
         subprocess.run(['rm', file])
+        Image.open('ObjectMapper/manual_single_output/mapped_img/Real_1.jpg').show()
+
         #subprocess.run(['python', './script.py', file])
         #pass
 

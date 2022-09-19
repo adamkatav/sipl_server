@@ -2,64 +2,49 @@
   "Carts": [],
   "Balls": [
     {
-      "Center": "61, 185",
-      "Radius": 11,
+      "Center": "59, 134",
+      "Radius": 13,
       "IsStatic": false
     }
 ,    {
-      "Center": "189, 236",
-      "Radius": 12,
-      "IsStatic": false
-    }
-,    {
-      "Center": "239, 164",
+      "Center": "127, 144",
       "Radius": 16,
       "IsStatic": false
     }
   ],
-  "Walls": [],
+  "Walls": [
+    {
+      "A": "70, 70",
+      "B": "156, 71"
+    }
+  ],
   "Blocks": [
     {
-      "A": "114, 213",
-      "B": "115, 243",
-      "C": "91, 244",
-      "D": "90, 214",
+      "A": "240, 102",
+      "B": "250, 121",
+      "C": "222, 137",
+      "D": "212, 118",
       "IsStatic": true
-    }
-,    {
-      "A": "66, 77",
-      "B": "69, 78",
-      "C": "58, 108",
-      "D": "55, 107",
-      "IsStatic": true
-    }
-,    {
-      "A": "256, 39",
-      "B": "253, 81",
-      "C": "232, 80",
-      "D": "234, 38",
-      "IsStatic": false
     }
   ],
   "Lines": [
     {
-      "A": "51, 209",
-      "B": "57, 105",
-      "connectionA": "Balls",
-      "connectionB": "Blocks",
-      "indexA": 0,
-      "indexB": 1
-    }
-  ],
-  "Springs": [
-    {
-      "A": "146, 209",
-      "B": "178, 247",
-      "connectionA": "Blocks",
+      "A": "143, 68",
+      "B": "128, 163",
+      "connectionA": "Walls",
       "connectionB": "Balls",
       "indexA": 0,
       "indexB": 1
     }
+,    {
+      "A": "102, 68",
+      "B": "55, 155",
+      "connectionA": "Walls",
+      "connectionB": "Balls",
+      "indexA": 0,
+      "indexB": 0
+    }
   ],
+  "Springs": [],
   "Triangles": []
 }

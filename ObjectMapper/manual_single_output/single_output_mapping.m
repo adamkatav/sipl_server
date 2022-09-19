@@ -7,7 +7,7 @@ fileID = fopen(file_name_res,'r');
 text = fread(fileID,inf);
 str = char(text');
 
-time = 0;
+time = 134;
 num_img = 134;
 waitbar(time/num_img);
 
