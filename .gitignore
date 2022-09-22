@@ -133,3 +133,5 @@ dmypy.json
 #By adam
 sipl_spice/
 ftp_files/
+ObjectMappingNN/
+mmdetection/
