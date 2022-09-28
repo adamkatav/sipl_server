@@ -1,4 +1,5 @@
 #from msilib.schema import File
+import os
 from pyftpdlib.authorizers import DummyAuthorizer
 from pyftpdlib.handlers import FTPHandler
 from pyftpdlib.servers import FTPServer
@@ -52,8 +53,8 @@ class MyHandler(FTPHandler):
         # # close all our files object
         # original_img.close()
         # vertical_img.close()
-
-        subprocess.run(['python', './script.py', file])
+        if(os.path.basename(file) != 'params.txt'):
+            subprocess.run(['python', './script.py', file, os.path.abspath('./ftp_files/params.txt')])
         #pass
 
     # def on_incomplete_file_sent(self, file):
