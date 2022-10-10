@@ -57,24 +57,17 @@ class MyHandler(FTPHandler):
         image = Image.open(file)
         image_resized = image.resize((300, 300))
         image_resized.save(file)
-        #Place image from phone in ObjectMapper and RCNN
+        #Place image from phone in ObjectMappingNN and RCNN
         subprocess.run(['cp', file, './mmdetection/adam_files/input/Real_1.jpg'])
-        subprocess.run(['cp', file, './ObjectMapper/manual_single_output/Real_1.jpg'])
+        subprocess.run(['cp', file, './ObjectMappingNN/Real_1.jpg'])
         os.chdir('./mmdetection/adam_files/')
         #Run RCNN
         subprocess.run(['bash', './runRCNN.sh'])
-        #Place RCNN output in ObjectMapper
-        subprocess.run(['cp', 'our_json_new_result.bbox.json', f'{current_dir}/ObjectMapper/manual_single_output/'])
+        #Place RCNN output in ObjectMappingNN
+        subprocess.run(['cp', 'our_json_new_result.bbox.json', f'{current_dir}/ObjectMappingNN'])
         os.chdir(current_dir)
-        os.chdir('ObjectMapper/manual_single_output/')
-        #Run ObjectMapper
-        subprocess.run(['matlab', '-batch', 'single_output_mapping'])
-        #Place ObjectMapper output in ftp_files
-        subprocess.run(['cp', './jsons/Real_1.json', f'{current_dir}/ftp_files/output.json'])
-        os.chdir(current_dir)
-        subprocess.run(['rm', file])
-        Image.open('ObjectMapper/manual_single_output/mapped_img/Real_1.jpg').show()
-
+        subprocess.run(['docker', 'exec', 'mapper', 'python', '/project/test_main_pipe.py', '/project/rectangle_special_sort.pth', '/project/Real_1.jpg', '/project/'])
+        subprocess.run(['cp', './ObjectMappingNN/example.json', f'{current_dir}/ftp_files/output.json'])
         #subprocess.run(['python', './script.py', file])
         #pass
 
