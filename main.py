@@ -54,6 +54,7 @@ class MyHandler(FTPHandler):
         # original_img.close()
         # vertical_img.close()
         if(os.path.basename(file) != 'params.txt'):
+            print(f'file recieved: {os.path.basename(file)}')
             subprocess.run(['python', './script.py', file, os.path.abspath('./ftp_files/params.txt')])
         #pass
 

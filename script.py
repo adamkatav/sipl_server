@@ -30,8 +30,10 @@ import matplotlib.image as mpimg
 # plt.show()
 subprocess.run(['cp', sys.argv[1], '../pythonProject/Dans_rebuild/pic.jpg'])
 subprocess.run(['cp', sys.argv[2], '../pythonProject/Dans_rebuild/params.txt'])
+print('Before docker')
 subprocess.run(['docker', 'exec', 'spice', './run_dans_script.sh', 'pic.jpg', 'params.txt'])
-subprocess.run(['rm', sys.argv[1]])
+print('After docker')
+#subprocess.run(['rm', sys.argv[1]])
 
 ltspice_proc = subprocess.Popen(['wine', '/home/adam/.wine/drive_c/Program Files/LTC/LTspiceXVII/XVIIx64.exe', '-big', '-Run', '-b', f'C:\\users\\adam\\Desktop\\sipl\\pythonProject\\Dans_rebuild\\output.asc'])
 # os.system("wine '/home/adam/.wine/drive_c/Program Files/LTC/LTspiceXVII/XVIIx64.exe' -big -b 'C:\\users\\adam\\Desktop\\sipl\\sipl_server\\sipl_spice\\adam_circuit.asc'")
